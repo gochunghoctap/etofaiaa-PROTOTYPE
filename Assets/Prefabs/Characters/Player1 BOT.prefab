@@ -183,7 +183,7 @@ MonoBehaviour:
   attackKey: Fire1
   magicKey: Fire2
   guardKey: Fire3
-  jumpKey: 119
+  jumpKey: Jump
   MoveInput: 0
   CurrentAction: 0
   JumpPressed: 0
