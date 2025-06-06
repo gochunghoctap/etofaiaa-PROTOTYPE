@@ -7,6 +7,7 @@ public class P1B : MonoBehaviour
     public GameObject prefabToSpawn;      // 表示される画像（Imageコンポーネント）
     public Transform spawnPoint;
 
+
     public void Start()
     {
 
@@ -17,6 +18,8 @@ public class P1B : MonoBehaviour
     void ShowPhoto()
     {
         GameObject newObj = Instantiate(prefabToSpawn, spawnPoint.position, spawnPoint.rotation);
+
+       spawnPoint.gameObject.SetActive(false);//後でselectmanagerをcheck
 
         // スクリプトを無効にする
         PlayerController script = newObj.GetComponent<PlayerController>();

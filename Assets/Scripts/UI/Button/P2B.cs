@@ -18,6 +18,8 @@ public class P2B : MonoBehaviour
     {
         GameObject newObj = Instantiate(prefabToSpawn, spawnPoint.position, spawnPoint.rotation);
 
+        spawnPoint.gameObject.SetActive(false);//後でselectmanagerをcheck
+
         // スクリプトを無効にする
         PlayerController script = newObj.GetComponent<PlayerController>();
         if (script != null)
