@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Attack
+  - Magic
+  - Guard
   layers:
   - Default
   - TransparentFX
