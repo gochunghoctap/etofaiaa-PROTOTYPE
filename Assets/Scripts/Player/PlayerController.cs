@@ -10,11 +10,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded = false;
     private bool isStunned = false;
-    //private float stunDuration = 0.5f;
     private Animator animator;
 
     private int currentState = -1;
-    void SetActionState(int state)
+    public void SetActionState(int state)
     {
         if (currentState != state)
         {
