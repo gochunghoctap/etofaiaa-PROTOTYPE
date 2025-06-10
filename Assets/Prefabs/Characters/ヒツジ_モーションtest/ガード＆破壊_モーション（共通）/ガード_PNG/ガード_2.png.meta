@@ -168,6 +168,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -734,7 +747,32 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "\u30AC\u30FC\u30C9_2_0": -159803010030694278
+      "\u30AC\u30FC\u30C9_2_1": 809388343898662625
+      "\u30AC\u30FC\u30C9_2_10": -7066215627927649569
+      "\u30AC\u30FC\u30C9_2_11": 7234807848509199332
+      "\u30AC\u30FC\u30C9_2_12": 3258080252729638290
+      "\u30AC\u30FC\u30C9_2_13": 6606678728908032218
+      "\u30AC\u30FC\u30C9_2_14": 2874896623983226888
+      "\u30AC\u30FC\u30C9_2_15": -6231578920224320704
+      "\u30AC\u30FC\u30C9_2_16": 7866921059596170100
+      "\u30AC\u30FC\u30C9_2_17": -7046675256590150647
+      "\u30AC\u30FC\u30C9_2_18": -8090256324985320078
+      "\u30AC\u30FC\u30C9_2_19": -7487084533990434310
+      "\u30AC\u30FC\u30C9_2_2": 857887338340583699
+      "\u30AC\u30FC\u30C9_2_20": -5414335512487338613
+      "\u30AC\u30FC\u30C9_2_21": 631871329313393456
+      "\u30AC\u30FC\u30C9_2_22": 3084229804465447563
+      "\u30AC\u30FC\u30C9_2_23": -1146903938832362240
+      "\u30AC\u30FC\u30C9_2_24": 3923725991290519810
+      "\u30AC\u30FC\u30C9_2_3": -3788764478523439094
+      "\u30AC\u30FC\u30C9_2_4": 1028525124833921984
+      "\u30AC\u30FC\u30C9_2_5": 4607168734331960428
+      "\u30AC\u30FC\u30C9_2_6": -5557787192102270236
+      "\u30AC\u30FC\u30C9_2_7": -2983688331737022101
+      "\u30AC\u30FC\u30C9_2_8": -4283929149858261981
+      "\u30AC\u30FC\u30C9_2_9": -477038882465476731
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
