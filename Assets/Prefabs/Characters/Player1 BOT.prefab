@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8220068861336803944}
   - component: {fileID: 3535923869216125478}
   - component: {fileID: 298607366414971077}
-  - component: {fileID: 8271063696069281377}
   - component: {fileID: 2993822350330202563}
   m_Layer: 0
   m_Name: Player1 BOT
@@ -174,7 +173,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5614037434363144864}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75eddf85d7d451e4ba3069466ecf977e, type: 3}
   m_Name: 
@@ -194,7 +193,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5614037434363144864}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7478fae62339286449ae2e62fddc0e43, type: 3}
   m_Name: 
@@ -202,21 +201,6 @@ MonoBehaviour:
   playerInput: {fileID: 0}
   moveSpeed: 5
   jumpForce: 7
---- !u!114 &8271063696069281377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5614037434363144864}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06bda110b9a87bf43a82560582905a20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1: {fileID: 0}
-  player2: {fileID: 0}
-  damageAmount: 10
 --- !u!114 &2993822350330202563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +208,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5614037434363144864}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0e9c3cea5bcf0d4db4a09f2d5a93e70, type: 3}
   m_Name: 
