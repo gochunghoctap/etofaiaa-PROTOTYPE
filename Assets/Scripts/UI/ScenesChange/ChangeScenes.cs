@@ -25,4 +25,8 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("option");
     }
 
+    public void TitleScene()
+    {
+        SceneManager.LoadScene("title");
+    }
 }
