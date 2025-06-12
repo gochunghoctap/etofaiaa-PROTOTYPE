@@ -4,13 +4,19 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     // この関数をボタンから呼び出す
+    public void MenuScene()
+    {
+        SceneManager.LoadScene("menu");
+    }
+
     public void LoadGameScene()
     {
-        SceneManager.LoadScene("select"); // ゲームシーンの名前
+        SceneManager.LoadScene("select");
     }
 
     public void QuitGame()
     {
+        Debug.Log("ゲーム終了");
         Application.Quit();
     }
 
@@ -18,4 +24,5 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("option");
     }
+
 }
