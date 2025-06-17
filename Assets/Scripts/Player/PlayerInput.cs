@@ -12,24 +12,45 @@ public class PlayerInput : MonoBehaviour
     public string jumpKey = "Jump";
 
     [HideInInspector] public float MoveInput;
-    [HideInInspector] public ActionType CurrentAction = ActionType.None;
+    [HideInInspector] public ActionType CurrentAction { get; private set; } = ActionType.None;
     [HideInInspector] public bool JumpPressed = false;
+
+    private bool actionQueued = false;
 
     void Update()
     {
         MoveInput = Input.GetAxisRaw(horizontalAxis);
 
-        if (Input.GetButtonDown(attackKey))
-            CurrentAction = ActionType.Attack;
-        else if (Input.GetButtonDown(magicKey))
-            CurrentAction = ActionType.Magic;
-        else if (Input.GetButtonDown(guardKey))
-            CurrentAction = ActionType.Guard;
-        else
-            CurrentAction = ActionType.None;
+        if (!actionQueued) // Chỉ queue action 1 lần
+        {
+            if (Input.GetButtonDown(attackKey))
+            {
+                CurrentAction = ActionType.Attack;
+                actionQueued = true;
+            }
+            else if (Input.GetButtonDown(magicKey))
+            {
+                CurrentAction = ActionType.Magic;
+                actionQueued = true;
+            }
+            else if (Input.GetButtonDown(guardKey))
+            {
+                CurrentAction = ActionType.Guard;
+                actionQueued = true;
+            }
+            else if (Input.GetButtonDown(jumpKey))
+            {
+                CurrentAction = ActionType.Jump;
+                actionQueued = true;
+                JumpPressed = true;
+            }
+        }
+    }
 
-        JumpPressed = Input.GetButtonDown(jumpKey);
-        if(Input.GetButtonDown(jumpKey))
-            CurrentAction = ActionType.Jump;
+    public void ConsumeAction()
+    {
+        CurrentAction = ActionType.None;
+        actionQueued = false;
+        JumpPressed = false;
     }
 }

@@ -3,22 +3,23 @@
 public class hitsujiTEST_Magic : MonoBehaviour
 {
     public int damage = 20;
+    private bool canDealDamage = true;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnEnable()
     {
-        // Không tự đánh chính mình
-        if (other.gameObject == transform.root.gameObject) return;
+        canDealDamage = true; // reset mỗi lần bật hitbox
+    }
 
-        if (other.CompareTag("Player"))
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        if (!canDealDamage) return;
+        if (other.gameObject == transform.root.gameObject) return; //khong gay damage len ban than
+
+        var health = other.GetComponent<HealthSystem>();
+        if (health != null)
         {
-            var health = other.GetComponent<HealthSystem>();
-            if (health != null)
-            {
-                health.TakeDamage(damage);
-            }
-
-            // Tắt hitbox sau khi đánh trúng để không gây nhiều damage liên tục
-            gameObject.SetActive(false);
+            health.TakeDamage(damage);
+            canDealDamage = false; // chỉ gây damage 1 lần mỗi lần bật
         }
     }
 }

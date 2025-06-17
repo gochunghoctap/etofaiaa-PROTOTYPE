@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private bool isStunned = false;
     private Animator animator;
 
+
     private int currentState = -1;
     public void SetActionState(int state)
     {
@@ -30,23 +31,35 @@ public class PlayerController : MonoBehaviour
         if (playerInput == null)
             playerInput = GetComponent<PlayerInput>();
     }
- //----------------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------
     void Update()
     {
+        Debug.Log($"isPerformingAction = {isPerformingAction}");
         if (isStunned)
         {
-            SetActionState(6); // Stunned
+            SetActionState(6);
             return;
         }
 
+        if (isPerformingAction)
+        {
+            rb.linearVelocity = Vector2.zero; // dừng hẳn khi đang hành động
+            return;                    // KHÔNG nhận input di chuyển/jump gì cả
+        }
+
+        if (HandleActionInput())
+            return;
+
         HandleMovement();
         HandleJump();
-        if (!HandleActionInput())  // nếu không có action đặc biệt thì update animation trạng thái bình thường
-        {
-            UpdateAnimationState();
-        }
+        UpdateAnimationState();
     }
- //----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+    //----------------------------------------------------------------------------------------------------------------
     int facingDirection = 1;// save facing directions object
     void HandleMovement()
     {
@@ -70,27 +83,43 @@ public class PlayerController : MonoBehaviour
             // Không gọi SetActionState ở đây vì UpdateAnimationState sẽ xử lý jump
         }
     }
-//----------------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------
     bool HandleActionInput()
     {
+        if (isPerformingAction) return true;
+
         var action = playerInput.CurrentAction;
         switch (action)
         {
             case ActionType.Attack:
-                SetActionState(3);
+                SetActionState(3); // Attack
+                rb.linearVelocity = Vector2.zero;
+                isPerformingAction = true;
+                playerInput.ConsumeAction();  // Reset action đã xử lý
+                Debug.Log("▶ Bắt đầu hành động Attack");
                 return true;
             case ActionType.Magic:
-                SetActionState(4);
+                SetActionState(4); // Magic
+                rb.linearVelocity = Vector2.zero;
+                isPerformingAction = true;
+                playerInput.ConsumeAction();
+                Debug.Log("▶ Bắt đầu hành động Magic");
                 return true;
             case ActionType.Guard:
-                SetActionState(5);
+                SetActionState(5); // Guard
+                rb.linearVelocity = Vector2.zero;
+                isPerformingAction = true;
+                playerInput.ConsumeAction();
+                Debug.Log("▶ Bắt đầu hành động Guard");
                 return true;
             default:
                 return false;
         }
     }
- 
-//----------------------------------------------------------------------------------------------------------------
+
+
+
+    //----------------------------------------------------------------------------------------------------------------
     void UpdateAnimationState()
     {
         if (!isGrounded)
@@ -129,7 +158,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    //----------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------
     // --- Collider trigger để xác định grounded ---
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -148,13 +177,16 @@ public class PlayerController : MonoBehaviour
             // Debug.Log("Rời khỏi đất");
         }
     }
+    //----------------------------------------------------------------------------------------------------------------
+
+    private bool isPerformingAction = false;
+
+    public void EndAction()
+    {
+        isPerformingAction = false;
+        Debug.Log("Attack animation ended → return to Idle");
+        SetActionState(0); // Quay lại Idle sau khi animation kết thúc
+    }
+
 }
 
-
-
-
-/*if (action != ActionType.None)
-        {
-            Debug.Log($"{gameObject.name} thực hiện {action}");
-            // TODO: xử lý attack, magic, guard...
-        }*/
