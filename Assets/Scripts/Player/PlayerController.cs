@@ -10,19 +10,11 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded = false;
     private bool isStunned = false;
+    private bool isPerformingAction = false;
+
     private Animator animator;
+    private int facingDirection = 1;
 
-
-    private int currentState = -1;
-    public void SetActionState(int state)
-    {
-        if (currentState != state)
-        {
-            animator.SetInteger("ActionState", state);
-            currentState = state;
-        }
-    }
-//----------------------------------------------------------------------------------------------------------------
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -31,20 +23,20 @@ public class PlayerController : MonoBehaviour
         if (playerInput == null)
             playerInput = GetComponent<PlayerInput>();
     }
-    //----------------------------------------------------------------------------------------------------------------
+
     void Update()
     {
-        Debug.Log($"isPerformingAction = {isPerformingAction}");
         if (isStunned)
         {
-            SetActionState(6);
+            animator.SetBool("isStunned", true);
+            rb.linearVelocity = Vector2.zero;
             return;
         }
 
         if (isPerformingAction)
         {
-            rb.linearVelocity = Vector2.zero; // dừng hẳn khi đang hành động
-            return;                    // KHÔNG nhận input di chuyển/jump gì cả
+            rb.linearVelocity = Vector2.zero;
+            return;
         }
 
         if (HandleActionInput())
@@ -55,12 +47,6 @@ public class PlayerController : MonoBehaviour
         UpdateAnimationState();
     }
 
-
-
-
-
-    //----------------------------------------------------------------------------------------------------------------
-    int facingDirection = 1;// save facing directions object
     void HandleMovement()
     {
         float move = playerInput.MoveInput;
@@ -71,122 +57,83 @@ public class PlayerController : MonoBehaviour
             facingDirection = move > 0 ? -1 : 1;
             transform.localScale = new Vector3(facingDirection, 1, 1);
         }
-
-
     }
-//----------------------------------------------------------------------------------------------------------------
+
     void HandleJump()
     {
-        if (isGrounded && Input.GetButtonDown(playerInput.jumpKey))
+        if (isGrounded && playerInput.JumpPressed)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            // Không gọi SetActionState ở đây vì UpdateAnimationState sẽ xử lý jump
+            playerInput.JumpPressed = false; // Chỉ reset JumpPressed, không ảnh hưởng action khác
         }
     }
-    //----------------------------------------------------------------------------------------------------------------
+
     bool HandleActionInput()
     {
         if (isPerformingAction) return true;
 
         var action = playerInput.CurrentAction;
+        if (action == ActionType.None) return false;
+
         switch (action)
         {
             case ActionType.Attack:
-                SetActionState(3); // Attack
-                rb.linearVelocity = Vector2.zero;
-                isPerformingAction = true;
-                playerInput.ConsumeAction();  // Reset action đã xử lý
-                Debug.Log("▶ Bắt đầu hành động Attack");
-                return true;
+                animator.SetTrigger("Trigger_Attack");
+                break;
             case ActionType.Magic:
-                SetActionState(4); // Magic
-                rb.linearVelocity = Vector2.zero;
-                isPerformingAction = true;
-                playerInput.ConsumeAction();
-                Debug.Log("▶ Bắt đầu hành động Magic");
-                return true;
+                animator.SetTrigger("Trigger_Magic");
+                break;
             case ActionType.Guard:
-                SetActionState(5); // Guard
-                rb.linearVelocity = Vector2.zero;
-                isPerformingAction = true;
-                playerInput.ConsumeAction();
-                Debug.Log("▶ Bắt đầu hành động Guard");
-                return true;
-            default:
-                return false;
+                animator.SetTrigger("Trigger_Guard");
+                break;
         }
+
+        rb.linearVelocity = Vector2.zero;
+        isPerformingAction = true;
+        playerInput.ConsumeAction();
+        return true;
     }
 
-
-
-    //----------------------------------------------------------------------------------------------------------------
     void UpdateAnimationState()
     {
-        if (!isGrounded)
-        {
-            SetActionState(2); // Jump
-        }
-        else if (Mathf.Abs(playerInput.MoveInput) > 0.1f)
-        {
-            SetActionState(1); // Walk
-        }
-        else
-        {
-            SetActionState(0); // Idle
-        }
-    }
-//----------------------------------------------------------------------------------------------------------------
-    
-    public void ApplyStun()
-    {
-        ApplyStunGuardBreak(0.5f); // stun mặc định 0.5s
+        animator.SetBool("isGrounded", isGrounded);
+        animator.SetBool("isRunning", Mathf.Abs(playerInput.MoveInput) > 0.1f);
+        animator.SetBool("isJumping", !isGrounded && rb.linearVelocity.y > 0.1f);
+        animator.SetBool("isFalling", !isGrounded && rb.linearVelocity.y < -0.1f);
     }
 
-//----------------------------------------------------------------------------------------------------------------
-    public void ApplyStunGuardBreak(float duration)
+    public void ApplyStun(float duration = 0.5f)
     {
         if (!isStunned)
-            StartCoroutine(StunGuardBreakCoroutine(duration));
+            StartCoroutine(StunCoroutine(duration));
     }
 
-    IEnumerator StunGuardBreakCoroutine(float duration)
+    IEnumerator StunCoroutine(float duration)
     {
         isStunned = true;
-        SetActionState(6); // Stunned animation
+        animator.SetBool("isStunned", true);
+        rb.linearVelocity = Vector2.zero;
+
         yield return new WaitForSeconds(duration);
+
         isStunned = false;
+        animator.SetBool("isStunned", false);
     }
 
-
-//----------------------------------------------------------------------------------------------------------------
-    // --- Collider trigger để xác định grounded ---
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Ground"))
-        {
             isGrounded = true;
-            // Debug.Log("Đã chạm đất");
-        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Ground"))
-        {
             isGrounded = false;
-            // Debug.Log("Rời khỏi đất");
-        }
     }
-    //----------------------------------------------------------------------------------------------------------------
-
-    private bool isPerformingAction = false;
 
     public void EndAction()
     {
         isPerformingAction = false;
-        Debug.Log("Attack animation ended → return to Idle");
-        SetActionState(0); // Quay lại Idle sau khi animation kết thúc
     }
-
 }
-

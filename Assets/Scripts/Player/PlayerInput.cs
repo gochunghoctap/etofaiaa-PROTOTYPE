@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public enum ActionType { None, Attack, Magic, Guard, Jump }
+public enum ActionType { None, Attack, Magic, Guard }
 
 public class PlayerInput : MonoBehaviour
 {
@@ -21,7 +21,13 @@ public class PlayerInput : MonoBehaviour
     {
         MoveInput = Input.GetAxisRaw(horizontalAxis);
 
-        if (!actionQueued) // Chỉ queue action 1 lần
+        // Xử lý jump riêng biệt, không liên quan đến CurrentAction
+        if (Input.GetButtonDown(jumpKey))
+        {
+            JumpPressed = true;
+        }
+
+        if (!actionQueued)
         {
             if (Input.GetButtonDown(attackKey))
             {
@@ -38,12 +44,6 @@ public class PlayerInput : MonoBehaviour
                 CurrentAction = ActionType.Guard;
                 actionQueued = true;
             }
-            else if (Input.GetButtonDown(jumpKey))
-            {
-                CurrentAction = ActionType.Jump;
-                actionQueued = true;
-                JumpPressed = true;
-            }
         }
     }
 
@@ -51,6 +51,5 @@ public class PlayerInput : MonoBehaviour
     {
         CurrentAction = ActionType.None;
         actionQueued = false;
-        JumpPressed = false;
     }
 }

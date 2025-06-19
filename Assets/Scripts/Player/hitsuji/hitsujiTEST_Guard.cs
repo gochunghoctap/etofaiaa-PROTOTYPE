@@ -15,16 +15,21 @@ public class hitsujiTEST_Guard : MonoBehaviour
     {
         if (other.CompareTag("Attack"))
         {
-            // Đỡ được Attack hoàn toàn – không mất máu, không bị stun
+            // Đỡ thành công - không mất máu, không bị stun
             Debug.Log($"{gameObject.name} đã đỡ thành công đòn Attack.");
         }
         else if (other.CompareTag("Magic"))
         {
             Debug.Log($"{gameObject.name} bị trúng Magic trong khi đang Guard!");
 
-            // Gây stun trong 1 giây
             if (playerController != null)
-                playerController.ApplyStunGuardBreak(1f); // Sử dụng phương thức stun có tham số
+            {
+                // Gây stun 1 giây
+                playerController.ApplyStun(1f);
+
+                // Kết thúc hành động Guard (cho phép input trở lại sau animation)
+                playerController.EndAction();
+            }
         }
     }
 }
