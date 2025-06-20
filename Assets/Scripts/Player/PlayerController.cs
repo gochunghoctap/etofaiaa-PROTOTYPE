@@ -29,13 +29,13 @@ public class PlayerController : MonoBehaviour
         if (isStunned)
         {
             animator.SetBool("isStunned", true);
-            rb.linearVelocity = Vector2.zero;
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
             return;
         }
 
         if (isPerformingAction)
         {
-            rb.linearVelocity = Vector2.zero;
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
             return;
         }
 
@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
                 break;
         }
 
-        rb.linearVelocity = Vector2.zero;
+        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
         isPerformingAction = true;
         playerInput.ConsumeAction();
         return true;
@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour
     {
         isStunned = true;
         animator.SetBool("isStunned", true);
-        rb.linearVelocity = Vector2.zero;
+        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
 
         yield return new WaitForSeconds(duration);
 
