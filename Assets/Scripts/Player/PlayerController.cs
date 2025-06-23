@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
     private int facingDirection = 1;
+    public bool IsStunned => isStunned; // ✅ Cho phép đọc trạng thái từ ngoài
 
     private void Awake()
     {
@@ -112,7 +113,9 @@ public class PlayerController : MonoBehaviour
     {
         isStunned = true;
         animator.SetBool("isStunned", true);
-        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+        rb.linearVelocity = Vector2.zero;
+
+        isPerformingAction = false; // ✅ Đây là phần QUAN TRỌNG
 
         yield return new WaitForSeconds(duration);
 

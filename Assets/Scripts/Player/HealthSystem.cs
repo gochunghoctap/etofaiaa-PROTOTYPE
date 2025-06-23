@@ -3,23 +3,23 @@ using System.Collections;
 
 public class HealthSystem : MonoBehaviour
 {
-    public int maxHealth = 100;               // Máu tối đa
-    private int currentHealth;                // Máu hiện tại
-    private bool isStunned = false;           // Trạng thái choáng
-    private float stunDuration = 0.5f;        // Thời gian bị choáng
-    private Animator animator;                // Animator của nhân vật
+    public int maxHealth = 100;
+    private int currentHealth;
 
-    void Awake()
+    private PlayerController playerController; // ✅ Tham chiếu đến PlayerController
+
+    private void Awake()
     {
         currentHealth = maxHealth;
-        animator = GetComponent<Animator>();
+        playerController = GetComponent<PlayerController>(); // ✅ Gán tự động
     }
 
-    // Gọi khi nhận sát thương
     public void TakeDamage(int damage)
     {
-        if (isStunned)
-            return; // Nếu đang choáng thì bỏ qua sát thương tiếp theo (tuỳ chỉnh được)
+        if (playerController == null) return;
+
+        if (playerController.IsStunned)
+            return; // Nếu đang choáng, bỏ qua sát thương (tuỳ vào gameplay bạn muốn)
 
         currentHealth -= damage;
         Debug.Log($"{gameObject.name} mất {damage} máu, còn {currentHealth}");
@@ -30,30 +30,14 @@ public class HealthSystem : MonoBehaviour
         }
         else
         {
-            ApplyStun(); // Bị choáng khi còn sống
+            playerController.EndAction();            // ✅ Ngắt action hiện tại nếu có
+            playerController.ApplyStun(0.5f);         // ✅ Gọi stun đồng bộ với controller
         }
     }
 
     void Die()
     {
         Debug.Log($"{gameObject.name} chết!");
-        Destroy(this.gameObject); // Xoá object khỏi scene
-    }
-
-    // Gọi stun và khởi chạy coroutine
-    public void ApplyStun()
-    {
-        if (!isStunned)
-            StartCoroutine(StunCoroutine());
-    }
-
-    // Coroutine xử lý trạng thái choáng
-    IEnumerator StunCoroutine()
-    {
-        isStunned = true;
-        animator.SetBool("isStunned", true); // Bật trạng thái choáng
-        yield return new WaitForSeconds(stunDuration);
-        isStunned = false;
-        animator.SetBool("isStunned", false); // Tắt trạng thái choáng
+        Destroy(this.gameObject);
     }
 }
