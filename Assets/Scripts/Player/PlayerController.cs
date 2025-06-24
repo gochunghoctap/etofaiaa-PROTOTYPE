@@ -4,8 +4,8 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     public PlayerInput playerInput;
-    public float moveSpeed = 5f;
-    public float jumpForce = 7f;
+    private float moveSpeed = 5f;
+    private float jumpForce = 15f;
 
     private Rigidbody2D rb;
     private bool isGrounded = false;
