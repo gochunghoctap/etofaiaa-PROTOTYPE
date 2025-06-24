@@ -5,12 +5,14 @@ public class HealthSystem : MonoBehaviour
 {
     public int maxHealth = 100;
     private int currentHealth;
+    private HealthBar healthBar;
 
     private PlayerController playerController; // ✅ Tham chiếu đến PlayerController
 
     private void Awake()
     {
         currentHealth = maxHealth;
+        healthBar = GetComponentInChildren<HealthBar>();
         playerController = GetComponent<PlayerController>(); // ✅ Gán tự động
     }
 
@@ -23,6 +25,11 @@ public class HealthSystem : MonoBehaviour
 
         currentHealth -= damage;
         Debug.Log($"{gameObject.name} mất {damage} máu, còn {currentHealth}");
+
+        // ✅ Cập nhật HP bar ở đây
+        float healthFraction = (float)currentHealth / maxHealth;
+        if (healthBar != null)
+            healthBar.SetHealthPercent((float)currentHealth / maxHealth);
 
         if (currentHealth <= 0)
         {
