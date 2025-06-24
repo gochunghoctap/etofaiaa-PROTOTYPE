@@ -5,7 +5,7 @@ public class HealthSystem : MonoBehaviour
 {
     public int maxHealth = 100;
     private int currentHealth;
-    [HideInInspector] public HealthBar healthBar;
+    public HealthBar healthBar;
 
 
     private PlayerController playerController; // ✅ Tham chiếu đến PlayerController
@@ -13,18 +13,6 @@ public class HealthSystem : MonoBehaviour
     public void Awake()
     {
         currentHealth = maxHealth;
-
-        if (CompareTag("Player1"))
-        {
-            GameObject barObj = GameObject.FindGameObjectWithTag("HealthBar_Player1");
-            healthBar = barObj?.GetComponent<HealthBar>();
-        }
-        else if (CompareTag("Player2"))
-        {
-            GameObject barObj = GameObject.FindGameObjectWithTag("HealthBar_Player2");
-            healthBar = barObj?.GetComponent<HealthBar>();
-        }
-
         playerController = GetComponent<PlayerController>();
     }
 
