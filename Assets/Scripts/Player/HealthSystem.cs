@@ -1,21 +1,19 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class HealthSystem : MonoBehaviour
 {
     public int maxHealth = 100;
     private int currentHealth;
-    public HealthBar healthBar;
 
+    [HideInInspector] public HealthBar healthBar; // Gán từ GameManager
 
-    private PlayerController playerController; // ✅ Tham chiếu đến PlayerController
+    private PlayerController playerController;
 
-    public void Awake()
+    void Awake()
     {
         currentHealth = maxHealth;
         playerController = GetComponent<PlayerController>();
     }
-
 
     public void TakeDamage(int damage)
     {
@@ -23,13 +21,13 @@ public class HealthSystem : MonoBehaviour
             return;
 
         currentHealth -= damage;
-        currentHealth = Mathf.Max(currentHealth, 0); // Ngăn âm máu
+        currentHealth = Mathf.Max(currentHealth, 0); // Không âm máu
 
         Debug.Log($"{gameObject.name} mất {damage} máu, còn {currentHealth}");
 
         if (healthBar != null)
         {
-            float percent = (float)currentHealth / maxHealth;
+            float percent = Mathf.Clamp01((float)currentHealth / maxHealth);
             healthBar.SetHealthPercent(percent);
         }
 
@@ -44,9 +42,9 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
-    void Die()
+    private void Die()
     {
         Debug.Log($"{gameObject.name} chết!");
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 }

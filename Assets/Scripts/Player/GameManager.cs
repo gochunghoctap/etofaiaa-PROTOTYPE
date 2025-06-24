@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     {
         // Tạo Player1
         var player1Obj = Instantiate(Player1Prefab, spawnPos1.position, Quaternion.identity);
-        player1Obj.name = "Player1"; // Gán tên để dễ phân biệt nếu cần
+        player1Obj.name = "Player1";
 
         var playerInput1 = player1Obj.GetComponent<PlayerInput>();
         playerInput1.horizontalAxis = "Horizontal";
@@ -28,8 +28,15 @@ public class GameManager : MonoBehaviour
 
         // Gán HealthBar cho Player1
         var bar1Obj = GameObject.FindGameObjectWithTag("HealthBar_Player1");
-        var healthBar1 = bar1Obj?.GetComponent<HealthBar>();
-        player1Obj.GetComponent<HealthSystem>().healthBar = healthBar1;
+        if (bar1Obj != null)
+        {
+            var healthBar1 = bar1Obj.GetComponent<HealthBar>();
+            player1Obj.GetComponent<HealthSystem>().healthBar = healthBar1;
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ Không tìm thấy HealthBar_Player1");
+        }
 
         // Tạo Player2
         var player2Obj = Instantiate(Player2Prefab, spawnPos2.position, Quaternion.identity);
@@ -44,7 +51,14 @@ public class GameManager : MonoBehaviour
 
         // Gán HealthBar cho Player2
         var bar2Obj = GameObject.FindGameObjectWithTag("HealthBar_Player2");
-        var healthBar2 = bar2Obj?.GetComponent<HealthBar>();
-        player2Obj.GetComponent<HealthSystem>().healthBar = healthBar2;
+        if (bar2Obj != null)
+        {
+            var healthBar2 = bar2Obj.GetComponent<HealthBar>();
+            player2Obj.GetComponent<HealthSystem>().healthBar = healthBar2;
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ Không tìm thấy HealthBar_Player2");
+        }
     }
 }
