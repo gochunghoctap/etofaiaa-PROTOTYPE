@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     public PlayerInput playerInput;
     private float moveSpeed = 15f;
-    private float jumpForce = 15f;
+    private float jumpForce = 20f;
 
     private Rigidbody2D rb;
     private bool isGrounded = false;
