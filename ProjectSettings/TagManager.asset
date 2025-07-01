@@ -8,6 +8,10 @@ TagManager:
   - Attack
   - Magic
   - Guard
+  - HealthBar_Player1
+  - HealthBar_Player2
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX
