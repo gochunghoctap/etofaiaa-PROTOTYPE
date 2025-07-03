@@ -29,6 +29,9 @@ public class HealthSystem : MonoBehaviour
         {
             float percent = Mathf.Clamp01((float)currentHealth / maxHealth);
             healthBar.SetHealthPercent(percent);
+
+            // ✅ GỌI HÀM RUNG THANH MÁU
+            healthBar.Shake(0.15f, 0.7f); // Thời gian và độ rung (tuỳ chỉnh nếu muốn)
         }
 
         if (currentHealth <= 0)
