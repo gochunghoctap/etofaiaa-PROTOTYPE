@@ -6,7 +6,7 @@ PhysicsMaterial2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "\u885D\u7A81"
+  m_Name: friction
   serializedVersion: 2
   friction: 0
   bounciness: 0
