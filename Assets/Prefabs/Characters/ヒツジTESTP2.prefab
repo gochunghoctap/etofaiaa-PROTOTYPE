@@ -452,7 +452,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0b927800a21a16744aa36bd9baa500f4, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -520,8 +520,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: 0}
-  moveSpeed: 5
-  jumpForce: 7
 --- !u!114 &9198253781598496535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,6 +533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  healthBar: {fileID: 0}
 --- !u!95 &654041787150050109
 Animator:
   serializedVersion: 7

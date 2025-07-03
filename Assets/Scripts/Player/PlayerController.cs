@@ -4,8 +4,8 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     public PlayerInput playerInput;
-    public float moveSpeed = 5f;
-    public float jumpForce = 7f;
+    private float moveSpeed = 5f;
+    private float jumpForce = 15f;
 
     private Rigidbody2D rb;
     private bool isGrounded = false;
@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
     private int facingDirection = 1;
+    public bool IsStunned => isStunned; // ✅ Cho phép đọc trạng thái từ ngoài
 
     private void Awake()
     {
@@ -29,13 +30,13 @@ public class PlayerController : MonoBehaviour
         if (isStunned)
         {
             animator.SetBool("isStunned", true);
-            rb.linearVelocity = Vector2.zero;
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
             return;
         }
 
         if (isPerformingAction)
         {
-            rb.linearVelocity = Vector2.zero;
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
             return;
         }
 
@@ -88,7 +89,7 @@ public class PlayerController : MonoBehaviour
                 break;
         }
 
-        rb.linearVelocity = Vector2.zero;
+        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
         isPerformingAction = true;
         playerInput.ConsumeAction();
         return true;
@@ -113,6 +114,8 @@ public class PlayerController : MonoBehaviour
         isStunned = true;
         animator.SetBool("isStunned", true);
         rb.linearVelocity = Vector2.zero;
+
+        isPerformingAction = false; // ✅ Đây là phần QUAN TRỌNG
 
         yield return new WaitForSeconds(duration);
 
