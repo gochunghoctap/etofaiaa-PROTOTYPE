@@ -135,6 +135,8 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
     }
 
+
+
     public void EndAction()
     {
         isPerformingAction = false;
