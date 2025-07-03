@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class HealthSystem : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+            SceneManager.LoadScene("End");
         }
         else
         {
