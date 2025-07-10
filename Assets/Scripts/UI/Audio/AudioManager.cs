@@ -1,16 +1,18 @@
 using UnityEngine;
 
-public class AudioManger : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
+    public static AudioManager instance;
+
     void Awake()
     {
-        if (Object.FindObjectsByType<AudioManger>(FindObjectsSortMode.None).Length > 1)
+        if (instance != null && instance != this)
         {
             Destroy(gameObject);
             return;
         }
 
+        instance = this;
         DontDestroyOnLoad(gameObject);
     }
-
 }
