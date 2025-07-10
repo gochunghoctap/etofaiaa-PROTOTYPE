@@ -505,12 +505,10 @@ MonoBehaviour:
   attackKey: Fire1
   magicKey: Fire2
   guardKey: Fire3
-  abiruKey: Fire4
   jumpKey: Jump
   manaSystem: {fileID: 0}
-  manaCost1: 30
+  manaCost1: 10
   manaCost2: 20
-  manaRestore: -15
   MoveInput: 0
   JumpPressed: 0
 --- !u!114 &4537430328095254306

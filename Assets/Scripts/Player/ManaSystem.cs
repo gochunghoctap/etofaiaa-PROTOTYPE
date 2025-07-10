@@ -27,13 +27,6 @@ public class ManaSystem : MonoBehaviour
             UpdateManaBar();
         }
     }
-    public void RestoreMana(float amount)
-    {
-        currentMana += amount;
-        currentMana = Mathf.Clamp(currentMana, 0, maxMana);
-        UpdateManaBar();
-    }
-
 
     public bool UseMana(float amount)
     {

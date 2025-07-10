@@ -12,8 +12,6 @@ TagManager:
   - HealthBar_Player2
   - Player1
   - Player2
-  - ManaBar_Player1
-  - ManaBar_Player2
   layers:
   - Default
   - TransparentFX

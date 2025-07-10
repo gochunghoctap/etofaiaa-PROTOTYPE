@@ -87,9 +87,6 @@ public class PlayerController : MonoBehaviour
             case ActionType.Guard:
                 animator.SetTrigger("Trigger_Guard");
                 break;
-            case ActionType.Abiru:
-                animator.SetTrigger("Trigger_Abiru");
-                break;
         }
 
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);

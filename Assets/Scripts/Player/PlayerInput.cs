@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public enum ActionType { None, Attack, Magic, Guard, Abiru }
+public enum ActionType { None, Attack, Magic, Guard }
 
 public class PlayerInput : MonoBehaviour
 {
@@ -9,13 +9,10 @@ public class PlayerInput : MonoBehaviour
     public string attackKey = "Fire1";
     public string magicKey = "Fire2";
     public string guardKey = "Fire3";
-    public string abiruKey = "Fire4";
     public string jumpKey = "Jump";
     public ManaSystem manaSystem;
-    public float manaCost1;
-    public float manaCost2;
-    public float manaRestore;
-
+    public float manaCost1 = 30f;
+    public float manaCost2 = 10f;
 
 
 
@@ -44,36 +41,16 @@ public class PlayerInput : MonoBehaviour
             }
             else if (Input.GetButtonDown(magicKey))
             {
-                if (manaSystem != null && manaSystem.UseMana(manaCost1))
-                {
-                    CurrentAction = ActionType.Magic;
-                    actionQueued = true;
-                }
-                else
-                {
-                    Debug.Log("❌ Không đủ mana để dùng");
-                    // Bạn có thể thêm hiệu ứng báo lỗi ở đây nếu muốn
-                }
-
+                CurrentAction = ActionType.Magic;
+                actionQueued = true;
+                manaSystem.UseMana(manaCost1);
             }
             else if (Input.GetButtonDown(guardKey))
             {
-                if (manaSystem != null && manaSystem.UseMana(manaCost2))
-                {
-                    CurrentAction = ActionType.Guard;
-                    actionQueued = true;
-                }
-                else
-                {
-                    Debug.Log("❌ Không đủ mana để dùng");
-                    // Bạn có thể thêm hiệu ứng báo lỗi ở đây nếu muốn
-                }
-            }
-            else if (Input.GetButtonDown(abiruKey))
-            {
-                CurrentAction = ActionType.Abiru;
+                CurrentAction = ActionType.Guard;
                 actionQueued = true;
-                manaSystem.RestoreMana(Mathf.Abs(manaRestore));
+                manaSystem.UseMana(manaCost2);
+
             }
         }
     }
