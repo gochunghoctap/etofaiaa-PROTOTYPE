@@ -38,6 +38,25 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("⚠️ Không tìm thấy HealthBar_Player1");
         }
 
+        // Gán ManaBar cho Player1
+        var manaBar1Obj = GameObject.FindGameObjectWithTag("ManaBar_Player1");
+        if (manaBar1Obj != null)
+        {
+            var manaBar1 = manaBar1Obj.GetComponent<HealthBar>();
+            player1Obj.GetComponent<ManaSystem>().manaBar = manaBar1;
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ Không tìm thấy ManaBar_Player1");
+        }
+
+        // Sau khi tạo player1Obj
+        var manaSystem1 = player1Obj.GetComponent<ManaSystem>();
+        playerInput1.manaSystem = manaSystem1;
+
+
+
+
         // Tạo Player2
         var player2Obj = Instantiate(Player2Prefab, spawnPos2.position, Quaternion.identity);
         player2Obj.name = "Player2";
@@ -60,5 +79,23 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogWarning("⚠️ Không tìm thấy HealthBar_Player2");
         }
+
+        // Gán ManaBar cho Player2
+        var manaBar2Obj = GameObject.FindGameObjectWithTag("ManaBar_Player2");
+        if (manaBar2Obj != null)
+        {
+            var manaBar2 = manaBar2Obj.GetComponent<HealthBar>();
+            player2Obj.GetComponent<ManaSystem>().manaBar = manaBar2;
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ Không tìm thấy ManaBar_Player2");
+        }
+
+        // Sau khi tạo player2Obj
+        var manaSystem2 = player2Obj.GetComponent<ManaSystem>();
+        playerInput2.manaSystem = manaSystem2;
+
+
     }
 }

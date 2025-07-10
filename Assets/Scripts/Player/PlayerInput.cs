@@ -10,6 +10,11 @@ public class PlayerInput : MonoBehaviour
     public string magicKey = "Fire2";
     public string guardKey = "Fire3";
     public string jumpKey = "Jump";
+    public ManaSystem manaSystem;
+    public float manaCost1 = 30f;
+    public float manaCost2 = 10f;
+
+
 
     [HideInInspector] public float MoveInput;
     [HideInInspector] public ActionType CurrentAction { get; private set; } = ActionType.None;
@@ -38,11 +43,14 @@ public class PlayerInput : MonoBehaviour
             {
                 CurrentAction = ActionType.Magic;
                 actionQueued = true;
+                manaSystem.UseMana(manaCost1);
             }
             else if (Input.GetButtonDown(guardKey))
             {
                 CurrentAction = ActionType.Guard;
                 actionQueued = true;
+                manaSystem.UseMana(manaCost2);
+
             }
         }
     }
