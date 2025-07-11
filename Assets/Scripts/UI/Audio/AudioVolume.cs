@@ -9,7 +9,7 @@ public class AudioVolume : MonoBehaviour
 
     void Start()
     {
-        // PlayerPrefsから音量を読み込み（キー名：BGMVolume）
+        // PlayerPrefsから音量を読み込み
         float savedVolume = PlayerPrefs.GetFloat("BGMVolume", 0.7f); // デフォルトは0.7
         bgmSlider.value = savedVolume;
 
