@@ -233,7 +233,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -1626,19 +1626,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 365
-        y: 341
+        y: 343
         width: 1446
         height: 290
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f71e84b48cfcf0844b76bca61cbb1e59
-      internalID: -757525746
+      spriteID: 38c6fa87ca6f6c64988d164e4f59c882
+      internalID: 1289662650
       vertices: []
       indices: 
       edges: []
@@ -1647,7 +1647,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2dcaf7172d08883478281b4762aca1ba
+    spriteID: 1ac54687754eeff4eacc9657edcc0a96
     internalID: 0
     vertices: []
     indices: 
@@ -1657,68 +1657,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      opushon_01_0: -5501332599364129844
-      opushon_01_1: 6248664053684210273
-      opushon_01_10: 3265781687522686507
-      opushon_01_11: 5200627359866710224
-      opushon_01_12: -3696914163256259010
-      opushon_01_13: 5834779828650195264
-      opushon_01_14: -408913435870896196
-      opushon_01_15: -5967660398553340669
-      opushon_01_16: 3565667992710385810
-      opushon_01_17: 3385879270504653146
-      opushon_01_18: -9216035034672153285
-      opushon_01_19: 8731581320441238813
-      opushon_01_2: 3553053933306015415
-      opushon_01_20: -6546130573696967149
-      opushon_01_21: 57470713773652776
-      opushon_01_22: -6078593548926297583
-      opushon_01_23: 4358389433720848959
-      opushon_01_24: -8183098765052363527
-      opushon_01_25: -8058655013184978979
-      opushon_01_26: -2859871971485731543
-      opushon_01_27: 3669639253557924401
-      opushon_01_28: -8583128176514354851
-      opushon_01_29: -345227431716561267
-      opushon_01_3: -2796029633388690684
-      opushon_01_30: 8300259983988829734
-      opushon_01_31: 1088210080583707049
-      opushon_01_32: -6932925891790702521
-      opushon_01_33: 6837942995389572660
-      opushon_01_34: 2013281259267893277
-      opushon_01_35: -9066147356371640687
-      opushon_01_36: -634831244021948468
-      opushon_01_37: -5775895802915962005
-      opushon_01_38: -6539443345349472218
-      opushon_01_39: -7924999766408517750
-      opushon_01_4: -8948769574447790944
-      opushon_01_40: 8317965772781449501
-      opushon_01_41: -2543769779824333916
-      opushon_01_42: 7233064333347955207
-      opushon_01_43: 7218694874929152368
-      opushon_01_44: -8768079918449263591
-      opushon_01_45: -4352094742264957131
-      opushon_01_46: 2031885725027885101
-      opushon_01_47: -3328826362753568660
-      opushon_01_48: -5435535893360834601
-      opushon_01_49: -7022014003157807998
-      opushon_01_5: -2199907843962811234
-      opushon_01_50: -8888818990244969408
-      opushon_01_51: -4528933529689595603
-      opushon_01_52: 5874736738554819118
-      opushon_01_53: 7729506656606514636
-      opushon_01_54: 3230256818413388032
-      opushon_01_55: 8508661497211135089
-      opushon_01_56: 7296286650673516620
-      opushon_01_57: -7959515323958131167
-      opushon_01_58: -3095349139887364037
-      opushon_01_59: 3034469975077883494
-      opushon_01_6: -1172063273592341081
-      opushon_01_60: 4162653997288366835
-      opushon_01_61: -757525746
-      opushon_01_7: 1105222631603878360
-      opushon_01_8: -7578155656732889252
-      opushon_01_9: -93144949800489613
+      opushon_01_61: 1289662650
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

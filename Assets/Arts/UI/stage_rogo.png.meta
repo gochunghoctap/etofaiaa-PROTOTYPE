@@ -1,0 +1,1017 @@
+fileFormatVersion: 2
+guid: a762cb7dd756dfd438ea5ad71d123e95
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1934462296341289496
+    second: stage_rogo_0
+  - first:
+      213: -2523958631950639376
+    second: stage_rogo_1
+  - first:
+      213: -8957794300912602104
+    second: stage_rogo_2
+  - first:
+      213: -6585017782087127135
+    second: stage_rogo_3
+  - first:
+      213: -7417951208734966709
+    second: stage_rogo_4
+  - first:
+      213: -6262491857011567084
+    second: stage_rogo_5
+  - first:
+      213: 6733234147268460750
+    second: stage_rogo_6
+  - first:
+      213: -3458941635037030121
+    second: stage_rogo_7
+  - first:
+      213: -4710366854014170066
+    second: stage_rogo_8
+  - first:
+      213: -371704930917548597
+    second: stage_rogo_9
+  - first:
+      213: 4367663307469446286
+    second: stage_rogo_10
+  - first:
+      213: -4659290189109232226
+    second: stage_rogo_11
+  - first:
+      213: 5582805330735212393
+    second: stage_rogo_12
+  - first:
+      213: 8291161501832029047
+    second: stage_rogo_13
+  - first:
+      213: 8473603283360088068
+    second: stage_rogo_14
+  - first:
+      213: -1178433897403756965
+    second: stage_rogo_15
+  - first:
+      213: 5383724339281709124
+    second: stage_rogo_16
+  - first:
+      213: -4644402383404330790
+    second: stage_rogo_17
+  - first:
+      213: -2075186216763172419
+    second: stage_rogo_18
+  - first:
+      213: -6286953569236794214
+    second: stage_rogo_19
+  - first:
+      213: 2085789946555495026
+    second: stage_rogo_20
+  - first:
+      213: 4664236560827994568
+    second: stage_rogo_21
+  - first:
+      213: -448563413642484467
+    second: stage_rogo_22
+  - first:
+      213: -845271326920090534
+    second: stage_rogo_23
+  - first:
+      213: -7879451530983331741
+    second: stage_rogo_24
+  - first:
+      213: -6886527014153479227
+    second: stage_rogo_25
+  - first:
+      213: -802568246465411461
+    second: stage_rogo_26
+  - first:
+      213: 4338938136905775318
+    second: stage_rogo_27
+  - first:
+      213: 5573847369446935239
+    second: stage_rogo_28
+  - first:
+      213: -3470948372226200923
+    second: stage_rogo_29
+  - first:
+      213: 1147929795603754223
+    second: stage_rogo_30
+  - first:
+      213: -5708921233131808900
+    second: stage_rogo_31
+  - first:
+      213: 5981894076593647810
+    second: stage_rogo_32
+  - first:
+      213: 7084521459639415266
+    second: stage_rogo_33
+  - first:
+      213: 1534332724009267833
+    second: stage_rogo_34
+  - first:
+      213: -3169491864481265458
+    second: stage_rogo_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: stage_rogo_0
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 919
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a1fc4953798da10800000000000000
+      internalID: 1934462296341289496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_1
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 919
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe1dca2ff819fcd0800000000000000
+      internalID: -2523958631950639376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_2
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 921
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 804f5133b858fa380800000000000000
+      internalID: -8957794300912602104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_3
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 920
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1afe01357315d94a0800000000000000
+      internalID: -6585017782087127135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_4
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 923
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4c3c2a7da42e0990800000000000000
+      internalID: -7417951208734966709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_5
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 923
+        width: 19
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4169c0e06d82719a0800000000000000
+      internalID: -6262491857011567084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_6
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 923
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec0877168c0417d50800000000000000
+      internalID: 6733234147268460750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_7
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 935
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7191fc0c8ee5fffc0800000000000000
+      internalID: -3458941635037030121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_8
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 947
+        width: 37
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c06b88d4a61aeb0800000000000000
+      internalID: -4710366854014170066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_9
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 958
+        width: 47
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcdf56fa55077daf0800000000000000
+      internalID: -371704930917548597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_10
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 948
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8c593423ae0d9c30800000000000000
+      internalID: 4367663307469446286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_11
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 950
+        width: 18
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d7eac4240e65fb0800000000000000
+      internalID: -4659290189109232226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_12
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 962
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96721ac8edb1a7d40800000000000000
+      internalID: 5582805330735212393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_13
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 962
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773a71c157f101370800000000000000
+      internalID: 8291161501832029047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_14
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 962
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40003488a49489570800000000000000
+      internalID: 8473603283360088068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_15
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 945
+        width: 17
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e48f92d9c55afe0800000000000000
+      internalID: -1178433897403756965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_16
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 945
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448c28b23c4d6ba40800000000000000
+      internalID: 5383724339281709124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_17
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 944
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad0153fa3a4cb8fb0800000000000000
+      internalID: -4644402383404330790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_18
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 945
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db95b0371257333e0800000000000000
+      internalID: -2075186216763172419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_19
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 957
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a94444ad90140c8a0800000000000000
+      internalID: -6286953569236794214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_20
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 942
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2727588c7e632fc10800000000000000
+      internalID: 2085789946555495026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_21
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 922
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c1da8c9072bab040800000000000000
+      internalID: 4664236560827994568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_22
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 565
+        width: 66
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d056a9ea3f166c9f0800000000000000
+      internalID: -448563413642484467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_23
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 563
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5cda14e43ef444f0800000000000000
+      internalID: -845271326920090534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_24
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 563
+        width: 78
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368a4d6649096a290800000000000000
+      internalID: -7879451530983331741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_25
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 621
+        width: 50
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb1041ca242e60a0800000000000000
+      internalID: -6886527014153479227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_26
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 609
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b76cb699e64bcd4f0800000000000000
+      internalID: -802568246465411461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_27
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 609
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d8f9a03f31073c30800000000000000
+      internalID: 4338938136905775318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_28
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 566
+        width: 86
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ca4128a6a84a5d40800000000000000
+      internalID: 5573847369446935239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_29
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 596
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aaacb768d6b4dfc0800000000000000
+      internalID: -3470948372226200923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_30
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 560
+        width: 44
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec6c0e21144eef00800000000000000
+      internalID: 1147929795603754223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_31
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 590
+        width: 32
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c775e78b266d5c0b0800000000000000
+      internalID: -5708921233131808900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_32
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 569
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c0b06f18f4f30350800000000000000
+      internalID: 5981894076593647810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_33
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 566
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e1707d6bb6415260800000000000000
+      internalID: 7084521459639415266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_34
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 574
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97274d5bb7b0b4510800000000000000
+      internalID: 1534332724009267833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage_rogo_35
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 561
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec88a1321f3b304d0800000000000000
+      internalID: -3169491864481265458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
