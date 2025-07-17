@@ -29,7 +29,7 @@ public class ManaSystem : MonoBehaviour
     }
     public bool RecoveryMana(float amount)
     {
-        if (currentMana >= amount)
+        if (currentMana < maxMana)
         {
             currentMana += amount;
             UpdateManaBar();
@@ -49,6 +49,12 @@ public class ManaSystem : MonoBehaviour
         }
         return false;
     }
+
+    public bool HasEnoughMana(float amount)
+    {
+        return currentMana >= amount;
+    }
+
 
     void UpdateManaBar()
     {

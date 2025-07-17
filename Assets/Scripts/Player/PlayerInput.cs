@@ -41,13 +41,13 @@ public class PlayerInput : MonoBehaviour
                 CurrentAction = ActionType.Attack;
                 actionQueued = true;
             }
-            else if (Input.GetButtonDown(magicKey))
+            else if (Input.GetButtonDown(magicKey) && manaSystem.HasEnoughMana(manaCost1))
             {
                 CurrentAction = ActionType.Magic;
                 actionQueued = true;
                 manaSystem.UseMana(manaCost1);
             }
-            else if (Input.GetButtonDown(guardKey))
+            else if (Input.GetButtonDown(guardKey) && manaSystem.HasEnoughMana(manaCost2))
             {
                 CurrentAction = ActionType.Guard;
                 actionQueued = true;
