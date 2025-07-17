@@ -11,12 +11,12 @@ public class PlayerInput : MonoBehaviour
     public string guardKey = "Fire3";
     public string abiruKey = "Fire4";
     public string jumpKey = "Jump";
+    
     public ManaSystem manaSystem;
     public float manaCost1 = 30f;
     public float manaCost2 = 10f;
     public float manaCost3 = 15f;
-
-
+    
 
     [HideInInspector] public float MoveInput;
     [HideInInspector] public ActionType CurrentAction { get; private set; } = ActionType.None;

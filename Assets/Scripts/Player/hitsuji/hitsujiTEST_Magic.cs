@@ -13,7 +13,7 @@ public class hitsujiTEST_Magic : MonoBehaviour
     public void OnTriggerStay2D(Collider2D other)
     {
         if (!canDealDamage) return;
-        if (other.gameObject == transform.root.gameObject) return; //khong gay damage len ban than
+        if (other.transform.root == transform.root) return; //khong gay damage len ban than
 
         var health = other.GetComponent<HealthSystem>();
         if (health != null)
