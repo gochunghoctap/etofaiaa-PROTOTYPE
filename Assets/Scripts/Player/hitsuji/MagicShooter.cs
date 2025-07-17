@@ -16,18 +16,18 @@ public class MagicShooter : MonoBehaviour
     }
 
     void Update()
+{
+    if (playerInput != null && playerInput.CurrentAction == ActionType.Magic)
     {
-        if (playerInput != null && playerInput.CurrentAction == ActionType.Magic)
-        {
-            ShootBullet();
-            Invoke(nameof(ConsumeMagic), 0.01f); // delay nhẹ để chắc chắn frame sau mới reset
-        }
+        ShootBullet();
+        Invoke(nameof(ConsumeMagic), 0.01f); // delay nhẹ để chắc chắn frame sau mới reset
     }
+}
 
-    void ConsumeMagic()
-    {
-        playerInput.ConsumeAction();
-    }
+void ConsumeMagic()
+{
+    playerInput.ConsumeAction();
+}
 
     void ShootBullet()
     {
