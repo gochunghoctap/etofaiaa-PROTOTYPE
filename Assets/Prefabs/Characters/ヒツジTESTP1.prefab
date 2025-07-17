@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3137782560031868116}
   - component: {fileID: 3586927976256189733}
   - component: {fileID: 392051220182648799}
+  - component: {fileID: 5248760592036906511}
   m_Layer: 0
   m_Name: "\u30D2\u30C4\u30B8TESTP1"
   m_TagString: Player
@@ -187,6 +188,9 @@ MonoBehaviour:
   magicKey: Fire2
   guardKey: Fire3
   jumpKey: Jump
+  manaSystem: {fileID: 0}
+  manaCost1: 30
+  manaCost2: 10
   MoveInput: 0
   JumpPressed: 0
 --- !u!114 &3137782560031868116
@@ -238,6 +242,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5248760592036906511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2213436381874865428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1f6d42d57035e469ea4706fde39f3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxMana: 100
+  manaBar: {fileID: 0}
 --- !u!1 &3436719313629238712
 GameObject:
   m_ObjectHideFlags: 0
