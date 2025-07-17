@@ -57,7 +57,7 @@ public class PlayerInput : MonoBehaviour
             {
                 CurrentAction = ActionType.Abiru;
                 actionQueued = true;
-                manaSystem.UseMana(manaCost3);
+                manaSystem.RecoveryMana(manaCost3);
             }
         }
     }

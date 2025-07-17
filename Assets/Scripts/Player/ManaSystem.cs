@@ -27,6 +27,17 @@ public class ManaSystem : MonoBehaviour
             UpdateManaBar();
         }
     }
+    public bool RecoveryMana(float amount)
+    {
+        if (currentMana >= amount)
+        {
+            currentMana += amount;
+            UpdateManaBar();
+            return true;
+        }
+        return false;
+    }
+
 
     public bool UseMana(float amount)
     {
