@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public enum ActionType { None, Attack, Magic, Guard }
+public enum ActionType { None, Attack, Magic, Guard, Abiru }
 
 public class PlayerInput : MonoBehaviour
 {
@@ -9,10 +9,12 @@ public class PlayerInput : MonoBehaviour
     public string attackKey = "Fire1";
     public string magicKey = "Fire2";
     public string guardKey = "Fire3";
+    public string abiruKey = "Fire4";
     public string jumpKey = "Jump";
     public ManaSystem manaSystem;
     public float manaCost1 = 30f;
     public float manaCost2 = 10f;
+    public float manaCost3 = 15f;
 
 
 
@@ -50,7 +52,12 @@ public class PlayerInput : MonoBehaviour
                 CurrentAction = ActionType.Guard;
                 actionQueued = true;
                 manaSystem.UseMana(manaCost2);
-
+            }
+            else if (Input.GetButtonDown(abiruKey))
+            {
+                CurrentAction = ActionType.Abiru;
+                actionQueued = true;
+                manaSystem.UseMana(manaCost3);
             }
         }
     }
