@@ -129,9 +129,10 @@ GameObject:
   m_Component:
   - component: {fileID: 27693286}
   - component: {fileID: 27693285}
+  - component: {fileID: 27693287}
   m_Layer: 0
   m_Name: "\u4F53\u529B\u30D0\u30FC\uFF06\u304A\u672D\u30D0manains1"
-  m_TagString: Untagged
+  m_TagString: ManaBar_Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,14 +200,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27693284}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.201233, y: -20.371155, z: 7.133586}
-  m_LocalScale: {x: -1.229636, y: 0.86074525, z: 1.5370449}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.9, y: 1.03, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8000001, z: 2}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 996216778}
-  m_Father: {fileID: 0}
+  m_Children: []
+  m_Father: {fileID: 996216778}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &27693287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27693284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9c4a136e6889d46a98bc828b09be70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barTransform: {fileID: 27693286}
+  smoothSpeed: 5
 --- !u!1 &63266104
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,12 +819,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996216776}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5500009, y: 0.17857042, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -25.10717, y: -20.217451, z: 7.133586}
+  m_LocalScale: {x: -1.537045, y: 1.0759315, z: 0.76852244}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 27693286}
+  m_Children:
+  - {fileID: 27693286}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &997532816
 GameObject:
@@ -1330,9 +1345,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1447983695}
   - component: {fileID: 1447983694}
+  - component: {fileID: 1447983696}
   m_Layer: 0
   m_Name: "\u4F53\u529B\u30D0\u30FC\uFF06\u304A\u672D\u30D0manains2"
-  m_TagString: Untagged
+  m_TagString: ManaBar_Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1401,13 +1417,26 @@ Transform:
   m_GameObject: {fileID: 1447983693}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.900024, y: -20.371155, z: 7.133586}
-  m_LocalScale: {x: 1.229636, y: 0.86074525, z: 1.5370449}
+  m_LocalPosition: {x: 5.19, y: 0.95, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8000001, z: 2}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1596379016}
-  m_Father: {fileID: 0}
+  m_Children: []
+  m_Father: {fileID: 1596379016}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1447983696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447983693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9c4a136e6889d46a98bc828b09be70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barTransform: {fileID: 1447983695}
+  smoothSpeed: 5
 --- !u!1 &1473167245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,11 +1739,12 @@ Transform:
   m_GameObject: {fileID: 1596379014}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5875006, y: 0.17857042, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 0.5}
+  m_LocalPosition: {x: 24.852072, y: -20.217451, z: 7.133586}
+  m_LocalScale: {x: 1.537045, y: 1.0759315, z: 0.76852244}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1447983695}
+  m_Children:
+  - {fileID: 1447983695}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1637710408
 GameObject:
@@ -2188,8 +2218,8 @@ SceneRoots:
   - {fileID: 376386872}
   - {fileID: 5724059023302573937}
   - {fileID: 66848198000472000}
-  - {fileID: 27693286}
-  - {fileID: 1447983695}
+  - {fileID: 996216778}
+  - {fileID: 1596379016}
   - {fileID: 1881153643}
   - {fileID: 721490079}
   - {fileID: 1258301944}
