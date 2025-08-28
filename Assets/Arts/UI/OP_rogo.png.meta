@@ -646,6 +646,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: OP_rogo_22
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 458
+        width: 369
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 2, z: 5, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32a3f9d4e6c58840836c6eb039791ad
+      internalID: 10905397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -675,6 +697,7 @@ TextureImporter:
       OP_rogo_2: -3716150061994124294
       OP_rogo_20: -99900844947190363
       OP_rogo_21: 7778320008251905714
+      OP_rogo_22: 10905397
       OP_rogo_3: 4108884655186968544
       OP_rogo_4: 4877432676112872766
       OP_rogo_5: -3513447844693817940
