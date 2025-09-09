@@ -43,7 +43,7 @@ public class HealthSystem : MonoBehaviour
         else
         {
             playerController.EndAction();
-            playerController.ApplyStun(0.5f);
+            playerController.ApplyStun(1f);
         }
     }
 
