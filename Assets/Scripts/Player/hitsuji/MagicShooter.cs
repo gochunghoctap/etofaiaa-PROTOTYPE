@@ -4,7 +4,7 @@ public class MagicShooter : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform bulletSpawnPoint;
-    public float bulletSpeed = 10f;
+    private float bulletSpeed = 20f;
 
     private PlayerInput playerInput;
 

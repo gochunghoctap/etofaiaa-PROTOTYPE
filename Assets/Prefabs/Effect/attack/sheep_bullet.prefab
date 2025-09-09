@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4041834412778327267}
   - component: {fileID: 5177622415915787785}
   - component: {fileID: 7925714173075052450}
+  - component: {fileID: 1278138002614927438}
   m_Layer: 0
   m_Name: sheep_bullet
   m_TagString: Untagged
@@ -176,3 +177,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
+--- !u!114 &1278138002614927438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5082495885701757104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4ef1c3a069c7f45bba6641cf53baf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 5
