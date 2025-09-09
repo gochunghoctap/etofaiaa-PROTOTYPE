@@ -13,9 +13,9 @@ public class PlayerInput : MonoBehaviour
     public string jumpKey = "Jump";
     
     public ManaSystem manaSystem;
-    public float manaCost1 = 30f;
-    public float manaCost2 = 10f;
-    public float manaCost3 = 15f;
+    private float manaCost1 = 10f;
+    private float manaCost2 = 10f;
+    private float manaCost3 = 15f;
     
 
     [HideInInspector] public float MoveInput;
