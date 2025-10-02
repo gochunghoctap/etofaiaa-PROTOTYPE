@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public enum ActionType { None, Attack, Magic, Guard, Abiru }
 
@@ -13,9 +14,9 @@ public class PlayerInput : MonoBehaviour
     public string jumpKey = "Jump";
     
     public ManaSystem manaSystem;
-    private float manaCost1 = 10f;
-    private float manaCost2 = 10f;
-    private float manaCost3 = 15f;
+    public float manaCost1 = 30f;
+    public float manaCost2 = 10f;
+    public float manaCost3 = 15f;
     
 
     [HideInInspector] public float MoveInput;
@@ -23,6 +24,9 @@ public class PlayerInput : MonoBehaviour
     [HideInInspector] public bool JumpPressed = false;
 
     private bool actionQueued = false;
+    public GameObject targetObject;
+
+
 
     void Update()
     {
@@ -52,6 +56,15 @@ public class PlayerInput : MonoBehaviour
                 CurrentAction = ActionType.Guard;
                 actionQueued = true;
                 manaSystem.UseMana(manaCost2);
+                //////////////////////////////
+                Collider2D col = targetObject.GetComponent<Collider2D>();
+                Rigidbody2D rb = targetObject.GetComponent<Rigidbody2D>();
+                if (col != null)
+                {
+                    col.enabled = false;
+                    rb.gravityScale = 0f;
+                    StartCoroutine(ReenableAfterDelay(col, rb, 1.5f));
+                }
             }
             else if (Input.GetButtonDown(abiruKey))
             {
@@ -67,4 +80,12 @@ public class PlayerInput : MonoBehaviour
         CurrentAction = ActionType.None;
         actionQueued = false;
     }
+
+    IEnumerator ReenableAfterDelay(Collider2D col, Rigidbody2D rb, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        col.enabled = true;
+        rb.gravityScale = 1f;
+    }
+
 }

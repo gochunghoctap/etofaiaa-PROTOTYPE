@@ -425,6 +425,7 @@ MonoBehaviour:
   manaCost3: 15
   MoveInput: 0
   JumpPressed: 0
+  targetObject: {fileID: 4917547663475130687}
 --- !u!114 &4537430328095254306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,7 +503,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5082495885701757104, guid: 14ce90c3daf120c4ab5ae24795be6972, type: 3}
   bulletSpawnPoint: {fileID: 2560743779949051609}
-  bulletSpeed: 10
 --- !u!1 &5579602366728707698
 GameObject:
   m_ObjectHideFlags: 0
