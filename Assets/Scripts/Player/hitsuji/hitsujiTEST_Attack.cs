@@ -2,7 +2,7 @@
 
 public class hitsujiTEST_Attack : MonoBehaviour
 {
-    public int damage = 10;
+    public int damage = 30;
     private bool canDealDamage = true;
 
     private void OnEnable()

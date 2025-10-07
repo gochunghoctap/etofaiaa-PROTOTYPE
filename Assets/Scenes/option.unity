@@ -1131,6 +1131,7 @@ GameObject:
   - component: {fileID: 1080534655}
   - component: {fileID: 1080534657}
   - component: {fileID: 1080534656}
+  - component: {fileID: 1080534658}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1195,6 +1196,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080534654}
   m_CullTransparentMesh: 1
+--- !u!114 &1080534658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080534654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f542d495442dc74e9ef86aa579af4dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shiftDirection: {x: 0, y: 1}
+  shiftSpeed: 100
 --- !u!1 &1080561926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,7 +1483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1410658376
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1672,12 +1687,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549113222}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f542d495442dc74e9ef86aa579af4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageToShift: {fileID: 1850666922}
   shiftDirection: {x: 0, y: 1}
   shiftSpeed: 100
 --- !u!1 &1850666921
@@ -1691,6 +1705,7 @@ GameObject:
   - component: {fileID: 1850666922}
   - component: {fileID: 1850666924}
   - component: {fileID: 1850666923}
+  - component: {fileID: 1850666925}
   m_Layer: 5
   m_Name: Image2
   m_TagString: Untagged
@@ -1755,6 +1770,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850666921}
   m_CullTransparentMesh: 1
+--- !u!114 &1850666925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850666921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f542d495442dc74e9ef86aa579af4dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shiftDirection: {x: 0, y: 1}
+  shiftSpeed: 100
 --- !u!1 &2120653746
 GameObject:
   m_ObjectHideFlags: 0

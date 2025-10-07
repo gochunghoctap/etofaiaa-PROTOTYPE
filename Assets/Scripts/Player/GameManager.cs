@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
         playerInput2.attackKey = "Fire1_2";
         playerInput2.magicKey = "Fire2_2";
         playerInput2.guardKey = "Fire3_2";
-        playerInput1.abiruKey = "Fire4_2";
+        playerInput2.abiruKey = "Fire4_2";
         playerInput2.jumpKey = "Jump2";
 
         // Gán HealthBar cho Player2

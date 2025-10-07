@@ -2,7 +2,7 @@
 
 public class hitsujiTEST_Magic : MonoBehaviour
 {
-    public int damage = 20;
+    public int damage = 10;
     private bool canDealDamage = true;
 
     private void OnEnable()

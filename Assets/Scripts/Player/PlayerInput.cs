@@ -14,9 +14,9 @@ public class PlayerInput : MonoBehaviour
     public string jumpKey = "Jump";
     
     public ManaSystem manaSystem;
-    public float manaCost1 = 30f;
+    public float manaCost1 = 5f;
     public float manaCost2 = 10f;
-    public float manaCost3 = 15f;
+    public float manaCost3 = 30f;
     
 
     [HideInInspector] public float MoveInput;
@@ -24,9 +24,13 @@ public class PlayerInput : MonoBehaviour
     [HideInInspector] public bool JumpPressed = false;
 
     private bool actionQueued = false;
-    public GameObject targetObject;
+    private Rigidbody2D rb;
 
 
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
@@ -57,14 +61,8 @@ public class PlayerInput : MonoBehaviour
                 actionQueued = true;
                 manaSystem.UseMana(manaCost2);
                 //////////////////////////////
-                Collider2D col = targetObject.GetComponent<Collider2D>();
-                Rigidbody2D rb = targetObject.GetComponent<Rigidbody2D>();
-                if (col != null)
-                {
-                    col.enabled = false;
-                    rb.gravityScale = 0f;
-                    StartCoroutine(ReenableAfterDelay(col, rb, 1.5f));
-                }
+                rb.gravityScale *= 50f;
+                Invoke("ResetGravity", 0.2f);
             }
             else if (Input.GetButtonDown(abiruKey))
             {
@@ -81,11 +79,8 @@ public class PlayerInput : MonoBehaviour
         actionQueued = false;
     }
 
-    IEnumerator ReenableAfterDelay(Collider2D col, Rigidbody2D rb, float delay)
+    private void ResetGravity()
     {
-        yield return new WaitForSeconds(delay);
-        col.enabled = true;
-        rb.gravityScale = 1f;
+        rb.gravityScale /= 50f;
     }
-
 }
