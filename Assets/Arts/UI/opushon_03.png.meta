@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      opushon_03_0: -504973591402884038
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
