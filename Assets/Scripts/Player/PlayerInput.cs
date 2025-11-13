@@ -14,9 +14,9 @@ public class PlayerInput : MonoBehaviour
     public string jumpKey = "Jump";
     
     public ManaSystem manaSystem;
-    public float manaCost1 = 5f;
-    public float manaCost2 = 10f;
-    public float manaCost3 = 30f;
+    public float manaCost1 = 19.5f;
+    public float manaCost2 = 0f;
+    public float manaCost3 = 15f;
     
 
     [HideInInspector] public float MoveInput;
@@ -25,6 +25,9 @@ public class PlayerInput : MonoBehaviour
 
     private bool actionQueued = false;
     private Rigidbody2D rb;
+
+    public bool JumpBuffered = false;
+
 
 
     private void Start()
@@ -40,6 +43,8 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetButtonDown(jumpKey))
         {
             JumpPressed = true;
+            JumpBuffered = true;
+
         }
 
         if (!actionQueued)

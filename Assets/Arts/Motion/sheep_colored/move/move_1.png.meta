@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ad5ca5f91041f9c49a46c07a484a4861
+guid: c193b501f48746d408869332ef29d843
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6478594284956488269
-    second: opushon_04_0
+      213: 1212527640140087493
+    second: move_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: opushon_04_0
+      name: move_1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 960
-        height: 1080
+        x: 266
+        y: 17
+        width: 664
+        height: 914
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4215b65d2798e950800000000000000
-      internalID: 6478594284956488269
+      spriteID: 5c084e6e673c3d010800000000000000
+      internalID: 1212527640140087493
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      opushon_04_0: 6478594284956488269
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

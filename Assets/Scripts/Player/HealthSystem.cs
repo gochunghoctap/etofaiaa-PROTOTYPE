@@ -38,12 +38,20 @@ public class HealthSystem : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+            string loser = gameObject.name;
+            if (loser == "Player1")
+                GameResult.winnerName = "Player2";
+            else if (loser == "Player2")
+                GameResult.winnerName = "Player1";
+            else
+                GameResult.winnerName = "Unknown";
+
             SceneManager.LoadScene("End");
         }
         else
         {
             playerController.EndAction();
-            playerController.ApplyStun(1f);
+            playerController.ApplyStun(0.15f);
         }
     }
 

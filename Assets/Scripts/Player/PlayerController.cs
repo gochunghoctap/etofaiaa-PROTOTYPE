@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     public PlayerInput playerInput;
     private float moveSpeed = 30f;
-    private float jumpForce = 20f;
+    private float jumpForce = 40f;
 
     private Rigidbody2D rb;
     private bool isGrounded = false;
@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 4f;
 
         if (playerInput == null)
             playerInput = GetComponent<PlayerInput>();
@@ -62,10 +63,11 @@ public class PlayerController : MonoBehaviour
 
     void HandleJump()
     {
-        if (isGrounded && playerInput.JumpPressed)
+        if (isGrounded && (playerInput.JumpPressed || playerInput.JumpBuffered))
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            playerInput.JumpPressed = false; // Chỉ reset JumpPressed, không ảnh hưởng action khác
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            playerInput.JumpPressed = false;
+            playerInput.JumpBuffered = false;
         }
     }
 
@@ -128,13 +130,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ground"))
+        if (collision.CompareTag("Ground") || collision.CompareTag("Player"))
             isGrounded = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ground"))
+        if (collision.CompareTag("Ground") || collision.CompareTag("Player"))
             isGrounded = false;
     }
 

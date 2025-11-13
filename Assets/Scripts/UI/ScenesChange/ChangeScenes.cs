@@ -11,7 +11,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadGameScene()
     {
-        SceneManager.LoadScene("select");
+        SceneManager.LoadScene("TestScene");
     }
 
     public void QuitGame()

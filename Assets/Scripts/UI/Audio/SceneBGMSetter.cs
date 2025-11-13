@@ -11,10 +11,7 @@ public class SceneBGMSetter : MonoBehaviour
         {
             AudioManager.instance.PlayBGM(sceneBGM);
         }
-
-
     }
-
     // Update is called once per frame
     void Update()
     {

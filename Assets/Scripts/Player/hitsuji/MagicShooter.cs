@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class MagicShooter : MonoBehaviour
 {
@@ -7,24 +8,35 @@ public class MagicShooter : MonoBehaviour
     private float bulletSpeed = 20f;
 
     private PlayerInput playerInput;
+    private ActionType lastAction = ActionType.None;
 
-    void Awake()
+    void Start()
     {
         playerInput = GetComponent<PlayerInput>();
+        StartCoroutine(WatchMagicAction());
     }
 
-    void Update()
+    IEnumerator WatchMagicAction()
     {
-        if (playerInput != null && playerInput.CurrentAction == ActionType.Magic)
+        while (true)
         {
-            ShootBullet();
-            Invoke(nameof(ConsumeMagic), 0.01f); // delay nhẹ để chắc chắn frame sau mới reset
-        }
-    }
+            if (playerInput != null)
+            {
+                ActionType current = playerInput.CurrentAction;
 
-    void ConsumeMagic()
-    {
-        playerInput.ConsumeAction();
+                // Chỉ xử lý khi hành động Magic vừa được kích hoạt
+                if (current == ActionType.Magic && lastAction != ActionType.Magic)
+                {
+                    ShootBullet();
+                    yield return new WaitForSeconds(0.02f); // delay nhẹ để tránh xung đột
+                    playerInput.ConsumeAction();
+                }
+
+                lastAction = current;
+            }
+
+            yield return null;
+        }
     }
 
     void ShootBullet()
@@ -36,22 +48,14 @@ public class MagicShooter : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            // Xác định hướng mặt của nhân vật
             float direction = transform.localScale.x >= 0 ? -1f : 1f;
-
-            Vector2 shootDirection = new Vector2(direction, 0f); // bay ngang trái/phải
-
+            Vector2 shootDirection = new Vector2(direction, 0f);
             rb.linearVelocity = shootDirection * bulletSpeed;
 
-            // Không xoay viên đạn nếu không cần
-            bullet.transform.rotation = Quaternion.identity;
-
-            // Lật viên đạn theo hướng
-            bullet.transform.localScale = new Vector3(
-                direction * Mathf.Abs(bullet.transform.localScale.x),
-                bullet.transform.localScale.y,
-                bullet.transform.localScale.z
-            );
+            if (direction < 0)
+            {
+                bullet.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            }
         }
     }
 }
